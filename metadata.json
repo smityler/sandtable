@@ -1,0 +1,7 @@
+{
+  "name": "Team Rubicon - Sandtable",
+  "description": "A live operational map for visualizing and managing disaster response work orders. Upload work order data, view locations on a map, filter by status or work type, and assign tasks to teams using a drag-and-drop assignment board.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

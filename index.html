@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Rubicon - Live Operational Map</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #212529; /* Dark background */
+            color: #e0e0e0; /* Light text */
+        }
+        .marker-label {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 11px;
+            background-color: rgba(33, 37, 41, 0.85);
+            padding: 1px 4px;
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transform: translateY(-45px); /* Adjust to center above custom icon */
+        }
+        .info-window-content-wrapper {
+            background-color: #343a40;
+            color: #e0e0e0;
+            padding: 12px;
+            border-radius: 4px;
+            max-width: 250px;
+        }
+        .info-window-content-wrapper h3 { font-weight: bold; color: #ffffff; margin-bottom: 4px; font-size: 1rem; }
+        .info-window-content-wrapper p { margin: 4px 0; color: #ced4da; font-size: 0.875rem; }
+        .info-window-content-wrapper p strong { color: #f8f9fa; }
+        .info-window-content-wrapper a { color: #8ab4f8; font-weight: bold; text-decoration: none; font-size: 0.875rem; }
+        .info-window-content-wrapper a:hover { text-decoration: underline; }
+        
+        /* Google Maps Info Window Customization */
+        .gm-style-iw-c {
+            padding: 0 !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+            border-radius: 4px !important;
+        }
+        .gm-style-iw-d {
+            overflow: hidden !important; /* Hide scrollbars that might appear */
+        }
+        .gm-style-iw-t::after {
+            display: none; /* Hide the default tail */
+        }
+        .gm-ui-hover-effect {
+            display: none !important; /* Hide the default 'X' button */
+        }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
